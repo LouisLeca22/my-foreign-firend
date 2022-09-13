@@ -1,0 +1,17 @@
+@use "../../vars";
+@use "../../mixins";
+
+.home{
+  border-radius: 10px;
+  @include mixins.mobile{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+}
+  width: 65vw;
+  height: 80vh ;
+	background: #fff;
+	overflow: hidden;
+  display: flex;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}

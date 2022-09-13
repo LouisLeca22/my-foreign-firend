@@ -1,0 +1,100 @@
+@use "../../vars";
+@use "../../mixins";
+@use "sass:color";
+
+
+.sidebar {
+    @include mixins.mobile{
+        display: none;
+    }
+    flex: 1;
+    background-color: vars.$dark-color-secondary;
+    position: relative;
+    &__header{
+        display: flex;
+        align-items: center;
+        background-color: vars.$dark-color-tertiary;
+        height: 70px;
+        padding: 10px;
+        justify-content: space-between;
+        color: vars.$white;
+        .logo{
+            font-weight: bold;
+            display: flex;
+            gap: 2%;
+        }
+        .user{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            button{
+                border: none;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 28px;
+                height: 28px;
+                background-color: vars.$dark-color-primary;
+                color: #ddddf7;
+                font-size: 1.3rem;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+                &:hover{
+                    background-color: vars.$background-teriary;
+                    color: vars.$dark-color-tertiary;
+                }
+                &:active{
+                    scale: 0.90;
+                }
+            }
+        }
+    }
+    &__main{
+        &-room{
+            height: 100px;
+            display: flex;
+            gap: 10%;
+            align-items: center;
+            justify-content: center;
+            background-color: darken(vars.$dark-color-primary, 10%);
+            .icon{
+                width: 60px;
+                height: 60px;
+                border: 2px solid  vars.$background-secondary;
+                border-radius: 50%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            span{
+                text-align: center;
+                color: vars.$white;
+                width: 40%;
+                em{
+                    font-weight: bold;
+                }
+            }
+        }
+        &-users{
+            overflow: auto;
+           .user{
+            height: 50px;
+            padding: 10px 40px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10%;
+        
+            &:hover{
+                background-color: #2f2d52;
+            }
+           }
+        }
+    }
+}
+
+
+

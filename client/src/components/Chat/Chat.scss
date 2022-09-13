@@ -1,0 +1,22 @@
+@use "../../vars";
+@use "../../mixins";
+
+.chat{
+    flex: 2;
+
+    &__header{
+        height: 70px;
+        background-color: vars.$dark-color-primary;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        color: lightgray;
+        div{
+            display: flex;
+            align-items: center;
+            gap: 10%;
+            color: white;
+        }
+    }
+}
