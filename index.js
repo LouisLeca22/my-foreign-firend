@@ -9,7 +9,7 @@ import {dirname} from "path"
 import { fileURLToPath } from "url"
 dotenv.config();
 
-const port = process.env.PORT
+const port = process.env.PORT || 5000
 
 const app = express();
 const server = http.createServer(app);
